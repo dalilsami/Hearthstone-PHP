@@ -127,7 +127,7 @@ class player
     {
         echo "\nVoici vos trois premières cartes :\n";
         $this->display_deck(3);
-        echo "\nVoulez-vous les garder en première main ?\n";
+        echo "\nVoulez-vous les garder en première main ? (Y/n)\n";
         if (!keep_deck()) {
             $tmp_card = $this->p_deck[0];
             unset($this->p_deck[0]);

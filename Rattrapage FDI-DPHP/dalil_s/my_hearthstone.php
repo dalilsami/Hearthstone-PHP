@@ -10,6 +10,7 @@ require_once "my_classes.php";
 require_once "step1.php";
 require_once "step2.php";
 require_once "step3.php";
+require_once "step4.php";
 
 function my_hearthstone($argv)
 {
