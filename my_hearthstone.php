@@ -88,7 +88,7 @@ function my_hearthstone($argv)
     echo "\n=== MY HEARTHSTONE ===\n\n";
     $player = init($argv);
     if (!$player)
-        return 0;
+        return;
     $player->display();
 }
 
