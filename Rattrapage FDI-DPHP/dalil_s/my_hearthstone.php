@@ -47,7 +47,8 @@ function my_hearthstone($argv)
     echo("Cartes : \n");
     load_cards();
     while ($game == 0) {
-        return;
+
+        readline();
     }
 }
 
