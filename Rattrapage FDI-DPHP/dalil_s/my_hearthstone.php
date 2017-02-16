@@ -23,7 +23,7 @@ function my_hearthstone($argv)
     echo("Cartes : \n");
     init_deck($player);
     $player->deck_shuffle();
-    $callaghan = init_concurrent();
+    $callaghan = init_callaghan();
     while ($game == 0) {
 
     }
