@@ -35,11 +35,11 @@ class player
     {
         echo("\n=== PICK A DECK ===\n\n");
         echo("Constituez un deck de 10 cartes pour affronter vos ennemis.\n");
-        echo("Cartes : ");
+        echo("Cartes : \n");
         if ($dir = opendir("json/$this->p_class")) {
             while (($file = readdir($dir)) !== false) {
                 if ($file != "." && $file != "..")
-                    echo "$file \n";
+                    echo file_get_contents("json/$this->p_class/$file") . "\n";
             }
             closedir($dir);
         }
