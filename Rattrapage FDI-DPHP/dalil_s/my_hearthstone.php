@@ -21,7 +21,7 @@ function my_hearthstone($argv)
     echo("Constituez un deck de 10 cartes pour affronter vos ennemis.\n");
     echo("Cartes : \n");
     load_cards();
-    $player->init_deck($player);
+    init_deck($player);
     while ($game == 0) {
 
     }
