@@ -85,6 +85,7 @@ function my_hearthstone($argv)
         $commands = [
             "quit" => "quit",
             "add" => "add",
+            "see" => "see",
         ];
         if (isset($commands[$command])) {
             $game = $commands[$command]();
@@ -98,5 +99,3 @@ if (isset($argv[3]))
     echo "my_hearthstone: trop d'arguments\n";
 else
     my_hearthstone($argv);
-
-?>
