@@ -26,7 +26,7 @@ function quit($player, $nb_card)
 
 function add($player, $nb_card)
 {
-    echo("Quelle carte ajouter ?");
+    echo("Quelle carte ajouter ?\n");
     $card = readline();
     $player->add_card_to_deck($card, $nb_card);
     $nb_card++;

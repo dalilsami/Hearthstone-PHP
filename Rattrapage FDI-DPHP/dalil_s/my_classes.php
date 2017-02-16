@@ -95,7 +95,7 @@ class player
     {
         $nb_card = 0;
         while ($nb_card < 10) {
-            echo "\nPick a card : \n\n";
+            echo "\n= Ajouter une carte =\n\n";
             display_cards($this->get_p_class(), load_cards());
             $command = readline();
             $commands = [
