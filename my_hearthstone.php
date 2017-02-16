@@ -14,10 +14,12 @@ function load_cards()
     $cards = [];
     $dir = opendir("json/paladin");
     while ($file = readdir($dir)) {
-        $card = new card;
-        $card->create_card("paladin", "$file");
-        $cards[] = $card;
-        $card->display();
+        if ($file != "." && $file != "..") {
+            $card = new card;
+            $card->create_card("paladin", "$file");
+            $cards[] = $card;
+            $card->display();
+        }
     }
 }
 
