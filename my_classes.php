@@ -47,6 +47,16 @@ class card
         echo "$this->c_mp\n";
         echo "$this->c_desc\n";
     }
+
+    public function get_c_name()
+    {
+        return $this->c_name;
+    }
+
+    public function get_c_class()
+    {
+        return $this->c_class;
+    }
 }
 
 class player
