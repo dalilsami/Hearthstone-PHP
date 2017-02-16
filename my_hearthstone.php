@@ -11,9 +11,7 @@ require_once "step1.php";
 
 function quit()
 {
-    $game = 1;
     echo "ca marche pas\n";
-    return $game;
 }
 
 function add()
@@ -56,6 +54,15 @@ function display_cards($class, $cards)
     }
 }
 
+$tbfonctions = array("f1", "f2", "machin");
+$x = 1;
+$tbfonctions[$x]();
+$x = 0;
+$tbfonctions[$x]();
+$x = 2;
+$tbfonctions[$x]();
+
+
 function my_hearthstone($argv)
 {
     echo "\n=== MY HEARTHSTONE ===\n\n";
@@ -71,10 +78,10 @@ function my_hearthstone($argv)
         display_cards($player->get_p_class(), load_cards());
         $command = readline();
         $commands = [
-            "quit" => quit(),
-            "add" => add(),
+            "quit" => "quit",
+            "add" => "add",
         ];
-        if (isset($commands["$command"]))
+        if (isset($command))
             echo "test\n";
         else
             echo "Cette commande n'existe pas\n";
