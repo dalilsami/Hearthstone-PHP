@@ -12,6 +12,14 @@ require_once "step1.php";
 function pick_a_deck()
 {
     echo("\n=== PICK A DECK ===\n\n");
+    echo("Constituez un deck de 10 cartes pour affronter vos ennemis.");
+    if ($dir = opendir("json/")) {
+        while (($file = readdir($dir)) !== false) {
+            echo "filename: $file : filetype: " . filetype($dir . $file) . "\n";
+        }
+        closedir($dir);
+    }
+
 }
 
 function my_hearthstone($argv)
