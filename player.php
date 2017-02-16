@@ -40,7 +40,7 @@ class player
             while (($file = readdir($dir)) !== false) {
                 if ($file != "." && $file != "..") {
                     $file_contents = file_get_contents("json/$this->p_class/$file") . "\n";
-                    preg_match('/nom":\s+"([^"]+)/g', $file_contents, $card_name);
+                    preg_match('/nom":\s+"([^"]+)/', $file_contents, $card_name);
                     echo $card_name[0];
                 }
             }
