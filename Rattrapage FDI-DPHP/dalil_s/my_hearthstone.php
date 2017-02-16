@@ -21,6 +21,7 @@ function load_cards()
             $card->display();
         }
     }
+    print_r($cards);
 }
 
 function my_hearthstone($argv)
