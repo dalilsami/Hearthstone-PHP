@@ -21,7 +21,7 @@ class card
             $file_contents = file_get_contents("json/$class/$card");
             preg_match('/nom":\s+"([^"]+)/', $file_contents, $card_name);
             $this->c_name = $card_name[1];
-            /*preg_match('/attaque":\s+"([^"]+)/', $file_contents, $card_atk);
+            preg_match('/attaque":\s+"([^"]+)/', $file_contents, $card_atk);
             $this->c_atk = $card_atk[1];
             preg_match('/vie":\s+"([^"]+)/', $file_contents, $card_hp);
             $this->c_hp = $card_hp[1];
@@ -32,7 +32,7 @@ class card
             preg_match('/classe_joueur":\s+"([^"]+)/', $file_contents, $card_class);
             $this->c_class = $card_class[1];
             preg_match('/description":\s+"([^"]+)/', $file_contents, $card_desc);
-            $this->c_desc = $card_desc[1];*/
+            $this->c_desc = $card_desc[1];
         }
     }
 
