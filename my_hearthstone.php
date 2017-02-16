@@ -72,7 +72,7 @@ function my_hearthstone($argv)
             "quit" => "quit",
             "add" => "add",
         ];
-        if (isset($command())) {
+        if ($command() !== null) {
             echo "test\n";
 
         }
