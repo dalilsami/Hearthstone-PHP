@@ -103,6 +103,7 @@ class player
                 "add" => "add",
                 "see" => "see",
             ];
+            echo "Commandes :\n- add\n- see\n- quit";
             if (isset($commands[$command])) {
                 $nb_card = $commands[$command]($player, $nb_card);
             } else
