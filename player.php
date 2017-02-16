@@ -37,7 +37,7 @@ class player
         echo("Constituez un deck de 10 cartes pour affronter vos ennemis.\n");
         if ($dir = opendir("json/$this->p_class")) {
             while (($file = readdir($dir)) !== false) {
-                if ($file != "." || $file != "..")
+                if ($file != "." && $file != "..")
                     echo "filename: $file \n";
             }
             closedir($dir);
