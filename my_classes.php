@@ -91,7 +91,7 @@ class player
         $this->p_deck[$nb_card] = $card;
     }
 
-    public function init_deck()
+    public function init_deck($player)
     {
         $nb_card = 0;
         while ($nb_card < 10) {
