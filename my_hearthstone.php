@@ -54,15 +54,6 @@ function display_cards($class, $cards)
     }
 }
 
-$tbfonctions = array("f1", "f2", "machin");
-$x = 1;
-$tbfonctions[$x]();
-$x = 0;
-$tbfonctions[$x]();
-$x = 2;
-$tbfonctions[$x]();
-
-
 function my_hearthstone($argv)
 {
     echo "\n=== MY HEARTHSTONE ===\n\n";
