@@ -15,6 +15,15 @@ class card
     private $c_hp = 0;
     private $c_desc = "desc";
 
+    public function create_card($class)
+    {
+        while {
+            $file_contents = file_get_contents("json/$class/*.json") . "\n";
+            preg_match('/nom":\s+"([^"]+)/', $file_contents, $card_name);
+            $this->c_name = $card_name[1];
+        }
+    }
+
     public function create_card($class, $card)
     {
         if (fopen("json/$class/$card", "r")) {
