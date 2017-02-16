@@ -41,8 +41,9 @@ class player
                     echo "$card_name[1]\n";
                 }
             }
+            echo("Pick a card\n");
             $prompt = readline();
-            echo $prompt;
+
             closedir($dir);
         }
     }
@@ -56,4 +57,15 @@ class player
 class deck
 {
     private $deck_cards = 10;
+}
+
+class card
+{
+    private $card_name = "name";
+    private $type = "type";
+    private $class = "Dummy";
+    private $mana = 0;
+    private $atk = 0;
+    private $hp = 0;
+    private $desc = "desc";
 }
