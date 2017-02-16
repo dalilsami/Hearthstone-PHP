@@ -20,7 +20,7 @@ function see($player, $nb_card)
     if ($card != null) {
         echo "ok\n";
     } else
-        echo "Cette carte n'existe pas";
+        echo "Cette carte n'existe pas\n";
     return $nb_card;
 }
 
