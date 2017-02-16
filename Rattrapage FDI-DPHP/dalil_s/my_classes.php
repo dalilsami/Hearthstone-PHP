@@ -40,12 +40,12 @@ class card
     public function display()
     {
         echo "$this->c_name\n";
-        echo "$this->c_type\n";
-        echo "$this->c_class\n";
-        echo "$this->c_atk\n";
-        echo "$this->c_hp\n";
-        echo "$this->c_mp\n";
-        echo "$this->c_desc\n";
+        echo "Classe: $this->c_class\n";
+        echo "Type: $this->c_type\n";
+        echo "Points d'attaque: $this->c_atk\n";
+        echo "Points de vie: $this->c_hp\n";
+        echo "Mana: $this->c_mp\n";
+        echo "Description: $this->c_desc\n";
     }
 
     public function get_c_name()
