@@ -9,6 +9,7 @@
 require_once "my_classes.php";
 require_once "step1.php";
 require_once "step2.php";
+require_once "step3.php";
 
 function my_hearthstone($argv)
 {
@@ -20,9 +21,9 @@ function my_hearthstone($argv)
     echo("\n=== PICK A DECK ===\n\n");
     echo("Constituez un deck de 10 cartes pour affronter vos ennemis.\n");
     echo("Cartes : \n");
-    load_cards();
     init_deck($player);
     $player->deck_shuffle();
+    $callaghan = init_concurrent();
     while ($game == 0) {
 
     }
