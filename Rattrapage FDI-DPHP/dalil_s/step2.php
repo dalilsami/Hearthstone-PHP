@@ -25,7 +25,7 @@ function init_deck($p)
         if (isset($commands[$command])) {
             $commands[$command]($p, $nb_card);
         } else
-            echo "Cette commande n'existe pas\n";
+            echo "\nCette commande n'existe pas\n";
     }
     echo "Vous avez fini votre deck.\n";
 }
@@ -33,7 +33,7 @@ function init_deck($p)
 function see()
 {
     $card = null;
-    echo("Quelle carte regarder ?\n");
+    echo("\nQuelle carte voulez-vous regarder ?\n\n");
     $card_name = readline();
     foreach (load_cards() as $tmp_card) {
         if ($card_name === $tmp_card->get_c_name())
@@ -47,15 +47,15 @@ function see()
 
 function quit()
 {
-    echo "Voulez-vous vraiment quitter My Hearthstone ? (Y/n)\n";
+    echo "\nVoulez-vous vraiment quitter My Hearthstone ? (Y/n)\n";
     $answer = readline();
     if ($answer == "Y") {
-        echo "Au revoir !\n";
+        echo "\nAu revoir !\n";
         return 1;
     } elseif ($answer == "n")
         return 0;
     else {
-        echo "Réponse invalide\n";
+        echo "\nRéponse invalide\n";
     }
 
 }
@@ -63,7 +63,7 @@ function quit()
 function add($player, &$nb_card)
 {
     $card = null;
-    echo("Quelle carte voulez-vous ajouter ?\n\n");
+    echo("\nQuelle carte voulez-vous ajouter ?\n\n");
     $card_name = readline();
     foreach (load_cards() as $tmp_card) {
         if ($card_name === $tmp_card->get_c_name())
