@@ -25,15 +25,16 @@ function load_cards()
     ];
     foreach ($array as $class) {
         $dir = opendir("json/$class");
+        echo "$class\n";
         while ($file = readdir($dir)) {
             if ($file != "." && $file != "..") {
                 $card = new card;
                 $card->create_card($class, "$file");
                 $cards[] = $card;
+                echo "      $file\n";
             }
         }
     }
-    print_r($cards);
 }
 
 function my_hearthstone($argv)
