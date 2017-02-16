@@ -101,4 +101,11 @@ class player
     {
         return $this->p_class;
     }
+
+    public function display_deck()
+    {
+        foreach ($this->p_deck as $card) {
+            echo $card->get_c_name() . "\n";
+        }
+    }
 }
