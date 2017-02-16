@@ -25,14 +25,14 @@ function quit()
 
 function add($player, $nb_card)
 {
-    $card = 0;
+    $card = null;
     echo("Quelle carte ajouter ?\n");
     $card_name = readline();
     foreach (load_cards() as $tmp_card) {
         if ($card_name === $tmp_card->get_c_name())
             $card = $tmp_card;
     }
-    if ($card != 0) {
+    if ($card != null) {
         $player->add_card_to_deck($card, $nb_card);
         $nb_card++;
     } else
