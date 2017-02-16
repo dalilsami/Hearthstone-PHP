@@ -69,7 +69,7 @@ class player
 
     public function init_player($name, $class)
     {
-        $array = [
+        $classes = [
             1 => "mage",
             2 => "chasseur",
             3 => "druide",
@@ -81,7 +81,7 @@ class player
             9 => "guerrier",
         ];
         $this->p_name = $name;
-        $this->p_class = $array[$class];
+        $this->p_class = $classes[$class];
         echo "Votre nom : $this->p_name\n";
         echo "Votre classe : $this->p_class\n";
     }

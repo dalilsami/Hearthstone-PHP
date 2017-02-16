@@ -56,10 +56,15 @@ function add($player, $nb_card)
     return $nb_card;
 }
 
+function see($player, $nb_card)
+{
+    $player->display_deck();
+}
+
 function load_cards()
 {
     $cards = [];
-    $array = [
+    $classes = [
         1 => "mage",
         2 => "chasseur",
         3 => "druide",
@@ -70,7 +75,7 @@ function load_cards()
         8 => "demoniste",
         9 => "guerrier",
     ];
-    foreach ($array as $class) {
+    foreach ($classes as $class) {
         $dir = opendir("json/$class");
         while ($file = readdir($dir)) {
             if ($file != "." && $file != "..") {
