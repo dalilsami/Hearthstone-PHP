@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: dalil_s
@@ -19,20 +20,20 @@ class card
     {
         if (fopen("json/$class/$card", "r")) {
             $file_contents = file_get_contents("json/$class/$card");
-            preg_match('/"nom":\s+"([^"]+)"/', $file_contents, $card_name);
-            $this->c_name = $card_name[1];
-            preg_match('/"attaque":\s+"([^"]+)"/', $file_contents, $card_atk);
-            $this->c_atk = $card_atk[1];
-            preg_match('/"vie":\s+"([^"]+)"/', $file_contents, $card_hp);
-            $this->c_hp = $card_hp[1];
-            preg_match('/"mana":\s+"([^"]+)"/', $file_contents, $card_mp);
-            $this->c_mp = $card_mp[1];
-            preg_match('/"type":\s+"([^"]+)"/', $file_contents, $card_type);
-            $this->c_type = $card_type[1];
-            preg_match('/"classe_joueur":\s+"([^"]+)"/', $file_contents, $card_class);
-            $this->c_class = $card_class[1];
-            preg_match('/"description":\s+"([^"]+)"/', $file_contents, $card_desc);
-            $this->c_desc = $card_desc[1];
+            if (preg_match('/"nom":\s+"([^"]+)"/', $file_contents, $card_name))
+                $this->c_name = $card_name[1];
+            if (preg_match('/"attaque":\s+"([^"]+)"/', $file_contents, $card_atk))
+                $this->c_atk = $card_atk[1];
+            if (preg_match('/"vie":\s+"([^"]+)"/', $file_contents, $card_hp))
+                $this->c_hp = $card_hp[1];
+            if (preg_match('/"mana":\s+"([^"]+)"/', $file_contents, $card_mp))
+                $this->c_mp = $card_mp[1];
+            if (preg_match('/"type":\s+"([^"]+)"/', $file_contents, $card_type))
+                $this->c_type = $card_type[1];
+            if (preg_match('/"classe_joueur":\s+"([^"]+)"/', $file_contents, $card_class))
+                $this->c_class = $card_class[1];
+            if (preg_match('/"description":\s+"([^"]+)"/', $file_contents, $card_desc))
+                $this->c_desc = $card_desc[1];
         }
     }
 
