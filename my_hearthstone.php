@@ -16,7 +16,6 @@ function my_hearthstone($argv)
     $game = 0;
     if (!$player)
         return;
-    $player->display();
     echo("\n=== PICK A DECK ===\n\n");
     echo("Constituez un deck de 10 cartes pour affronter vos ennemis.\n");
     echo("Cartes : \n");
