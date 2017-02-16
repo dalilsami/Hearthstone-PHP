@@ -13,7 +13,7 @@ class player
     private $p_class = "Dummy";
     private $p_hp = 15;
     private $p_mp = 0;
-    private $p_deck;
+    private $p_deck = [];
     public function init_player($name, $class)
     {
         $array = [
@@ -29,6 +29,11 @@ class player
         ];
         $this->p_name = $name;
         $this->p_class = $array[$class];
+    }
+
+    public function init_deck()
+    {
+
     }
     public function display()
     {
