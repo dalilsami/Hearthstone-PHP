@@ -109,7 +109,7 @@ class player
             } else
                 echo "Cette commande n'existe pas\n";
         }
-        echo "Vous avez fini votre "
+        echo "Vous avez fini votre deck.\n";
     }
 
     public function get_p_name()
