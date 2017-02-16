@@ -27,21 +27,23 @@ function init_deck(&$p)
         } else
             echo "\nCette commande n'existe pas\n";
     }
-    echo "\nVous avez fini votre deck.\n";
+    echo "Vous avez fini votre deck.\n";
     $p->display_deck();
+    if (!keep_deck())
+        init_deck($p);
+}
+
+function keep_deck()
+{
     echo "\nEtes-vous sur de vouloir garder ce deck ? (Y/n)\n";
     $answer = readline();
-    while ($answer != "Y" && $answer != "n") {
-        if ($answer != "Y") {
-            if ($answer == "n") {
-                echo "TEST";
-                init_deck($p);
-            } else {
-                echo "\nRéponse invalide\n";
-                echo "Etes-vous sur de vouloir garder ce deck ? (Y/n)\n";
-                $answer = readline();
-            }
-        }
+    if ($answer == 'Y' || $answer == 'y')
+        return 1;
+    else if ($answer == 'N' || $answer == 'n')
+        return 0;
+    else {
+        echo "\nRéponse invalide\n";
+        return keep_deck();
     }
 }
 
