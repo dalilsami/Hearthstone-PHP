@@ -19,7 +19,6 @@ function quit()
         return 0;
     else {
         echo "Réponse invalide\n";
-        return $nb_card;
     }
 
 }
