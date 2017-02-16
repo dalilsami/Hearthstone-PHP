@@ -95,7 +95,7 @@ class player
     {
         $nb_card = 0;
         while ($nb_card < 10) {
-            echo "\n= Ajouter une carte ($nb_card/10) =\n\n";
+            echo "\n= Ajouter une carte (" . ($nb_card + 1) . "/10) =\n\n";
             display_cards($this->get_p_class(), load_cards());
             echo "Commandes :\n- add\n- see\n- quit\n\n";
             $command = readline();
@@ -109,6 +109,7 @@ class player
             } else
                 echo "Cette commande n'existe pas\n";
         }
+        echo "Vous avez fini votre "
     }
 
     public function get_p_name()
