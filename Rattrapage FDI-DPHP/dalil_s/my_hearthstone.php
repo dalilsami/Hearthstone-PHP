@@ -6,7 +6,7 @@
  * Time: 09:03
  */
 
-require_once "player.php";
+require_once "my_classes.php";
 require_once "step1.php";
 
 function load_cards()
@@ -18,10 +18,8 @@ function load_cards()
             $card = new card;
             $card->create_card("paladin", "$file");
             $cards[] = $card;
-            $card->display();
         }
     }
-    print_r($cards);
 }
 
 function my_hearthstone($argv)
