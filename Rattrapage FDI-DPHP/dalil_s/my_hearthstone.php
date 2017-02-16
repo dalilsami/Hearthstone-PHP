@@ -22,6 +22,7 @@ function my_hearthstone($argv)
     echo("Cartes : \n");
     load_cards();
     init_deck($player);
+    $player->deck_shuffle();
     while ($game == 0) {
 
     }
