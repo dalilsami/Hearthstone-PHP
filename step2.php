@@ -34,9 +34,11 @@ function init_deck(&$p)
     while ($answer != "Y" && $answer != "n") {
         if ($answer != "Y") {
             if ($answer == "n") {
+                echo "TEST";
                 init_deck($p);
             } else {
                 echo "\nRéponse invalide\n";
+                echo "Etes-vous sur de vouloir garder ce deck ? (Y/n)\n";
                 $answer = readline();
             }
         }
