@@ -9,11 +9,6 @@
 require_once "player.php";
 require_once "step1.php";
 
-function pick_a_deck($player)
-{
-    $player->init_deck($player);
-}
-
 function my_hearthstone($argv)
 {
     echo "\n=== MY HEARTHSTONE ===\n\n";
@@ -21,7 +16,7 @@ function my_hearthstone($argv)
     if (!$player)
         return;
     $player->display();
-    pick_a_deck($player);
+    $player->init_deck();
 }
 
 if (isset($argv[3]))

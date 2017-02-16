@@ -31,7 +31,7 @@ class player
         $this->p_class = $array[$class];
     }
 
-    public function init_deck($player)
+    public function init_deck()
     {
         echo("\n=== PICK A DECK ===\n\n");
         echo("Constituez un deck de 10 cartes pour affronter vos ennemis.");
