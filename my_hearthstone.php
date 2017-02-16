@@ -20,6 +20,7 @@ function class_invalide() {
     echo "- Chaman\n";
     echo "- Démoniste\n";
     echo "- Guerrier\n\n";
+    return 0;
 }
 
 function pick_class($class) {
@@ -62,10 +63,10 @@ function init($argv){
             return $player;
         }
         else
-            class_invalide();
+            return class_invalide();
     }
     else
-        class_invalide();
+        return class_invalide();
 }
 
 function my_hearthstone($argv) {
