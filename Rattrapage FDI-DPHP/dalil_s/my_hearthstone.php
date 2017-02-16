@@ -23,7 +23,8 @@ function my_hearthstone($argv)
     echo("Cartes : \n");
     init_deck($player);
     $player->deck_shuffle();
-    $callaghan = init_callaghan();
+    $ia = init_ia("Callaghan");
+    echo "Un nouvel adversaire apparait ! Il s'agit de " . $ia->get_p_name() . ", un puissant " . $ia->get_p_class() . ".";
     while ($game == 0) {
 
     }
