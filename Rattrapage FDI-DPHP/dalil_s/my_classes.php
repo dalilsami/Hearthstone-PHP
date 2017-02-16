@@ -72,8 +72,8 @@ class player
         ];
         $this->p_name = $name;
         $this->p_class = $array[$class];
-        echo "Votre nom : $this->p_name";
-        echo "Votre classe : $this->p_class";
+        echo "Votre nom : $this->p_name\n";
+        echo "Votre classe : $this->p_class\n";
     }
 
     public function init_deck()
