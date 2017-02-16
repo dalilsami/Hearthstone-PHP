@@ -9,6 +9,17 @@
 require_once "my_classes.php";
 require_once "step1.php";
 
+function quit()
+{
+    $game = 1;
+    return $game;
+}
+
+function add()
+{
+    echo "add\n";
+}
+
 function load_cards()
 {
     $cards = [];
