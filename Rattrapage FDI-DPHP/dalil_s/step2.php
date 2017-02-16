@@ -61,6 +61,7 @@ function deck($player, $nb_card)
         $player->display_deck();
     else
         echo "\n\nVous n'avez pas de cartes dans votre deck.\n\n";
+    return $nb_card;
 }
 
 function load_cards()
