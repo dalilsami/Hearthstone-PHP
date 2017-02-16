@@ -87,7 +87,6 @@ function my_hearthstone($argv)
             "add" => "add",
         ];
         if (isset($commands[$command])) {
-            echo "Cette commande existe\n";
             $game = $commands[$command]();
         }
         else
