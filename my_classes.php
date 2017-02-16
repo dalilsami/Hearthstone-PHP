@@ -101,16 +101,43 @@ class player
         return $this->p_class;
     }
 
-    public function display_deck()
+    public function display_deck($length = null)
     {
-        echo "\n\nVotre Deck :\n\n";
-        foreach ($this->p_deck as $card) {
-            echo $card->get_c_name() . "\n";
+
+        if ($length == null) {
+            echo "\n\nVotre Deck :\n\n";
+            foreach ($this->p_deck as $card) {
+                echo $card->get_c_name() . "\n";
+            }
+        } else {
+            $i = 0;
+            while ($i < $length) {
+                echo $this->p_deck[$i]->get_c_name() . "\n";
+                $i++;
+            }
         }
     }
 
     public function deck_shuffle()
     {
         shuffle($this->p_deck);
+    }
+
+    public function beginning_shuffle()
+    {
+        echo "\nVoici vos trois premières cartes :\n";
+        $this->display_deck(3);
+        echo "\nVoulez-vous les garder en première main ?\n";
+        if (!keep_deck()) {
+            $tmp_card = $this->p_deck[0];
+            unset($this->p_deck[0]);
+            array_push($this->p_deck, $tmp_card);
+            $tmp_card = $this->p_deck[1];
+            unset($this->p_deck[1]);
+            array_push($this->p_deck, $tmp_card);
+            $tmp_card = $this->p_deck[2];
+            unset($this->p_deck[2]);
+            array_push($this->p_deck, $tmp_card);
+        }
     }
 }

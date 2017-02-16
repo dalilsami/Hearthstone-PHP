@@ -29,13 +29,13 @@ function init_deck(&$p)
     }
     echo "\nVous avez fini votre deck.\n";
     $p->display_deck();
+    echo "\nEtes-vous sur de vouloir garder ce deck ? (Y/n)\n";
     if (!keep_deck())
         init_deck($p);
 }
 
 function keep_deck()
 {
-    echo "\nEtes-vous sur de vouloir garder ce deck ? (Y/n)\n";
     $answer = readline();
     if ($answer == 'Y' || $answer == 'y')
         return 1;
