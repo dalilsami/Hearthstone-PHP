@@ -21,8 +21,8 @@ function my_hearthstone($argv)
     echo("Constituez un deck de 10 cartes pour affronter vos ennemis.\n");
     echo("Cartes : \n");
     while ($game == 0) {
-        $player->init_deck();
-    }
+        $card = new card();
+        $card->create_card("paladin", "humilite.json");
 }
 
 if (isset($argv[3]))
