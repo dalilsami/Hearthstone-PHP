@@ -18,11 +18,13 @@ function my_hearthstone($argv)
     $player = init($argv);
     $game = 0;
     if (!$player)
-        return;
+        return ;
     echo("\n=== PICK A DECK ===\n\n");
     echo("Constituez un deck de 10 cartes pour affronter vos ennemis.\n");
     echo("Cartes : \n");
-    init_deck($player);
+    $quit = init_deck($player);
+    if ($quit == -42)
+        return ;
     $player->deck_shuffle();
     $ia = init_ia("Callaghan");
     echo "\n=== Un nouvel adversaire apparait ! Il s'agit de " . $ia->get_p_name() . ", un puissant " . $ia->get_p_class() . " ===\n";
