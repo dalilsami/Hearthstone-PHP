@@ -32,8 +32,8 @@ function my_hearthstone($argv)
     echo("Constituez un deck de 10 cartes pour affronter vos ennemis.\n");
     echo("Cartes : \n");
     while ($game == 0) {
-        $card = new card();
-        $card->create_card($player->get_p_class(), "humilite.json");
+        load_cards();
+        return;
     }
 }
 
