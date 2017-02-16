@@ -12,6 +12,7 @@ require_once "step1.php";
 function quit()
 {
     $game = 1;
+    echo "ca marche pas\n";
     return $game;
 }
 
