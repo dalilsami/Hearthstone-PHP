@@ -84,8 +84,6 @@ class player
         ];
         $this->p_name = $name;
         $this->p_class = $classes[$class];
-        echo "Votre nom : $this->p_name\n";
-        echo "Votre classe : $this->p_class\n";
     }
 
     public function add_card_to_deck($card, $nb_card)
