@@ -31,13 +31,14 @@ function init_deck(&$p)
     $p->display_deck();
     echo "Etes-vous sur de vouloir garder ce deck ? (Y/n)\n";
     $answer = readline();
-    if ($answer != "Y") {
-        if ($answer == "n") {
-            $nb_card = 8;
-            init_deck($p);
-        } else {
-            echo "\nRéponse invalide\n";
-            init_deck($p);
+    while ($answer != "Y" && $answer != "n") {
+        if ($answer != "Y") {
+            if ($answer == "n") {
+                init_deck($p);
+            } else {
+                echo "\nRéponse invalide\n";
+                init_deck($p);
+            }
         }
     }
 }
