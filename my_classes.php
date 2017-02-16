@@ -86,6 +86,11 @@ class player
         echo "Votre classe : $this->p_class\n";
     }
 
+    public function add_card_to_deck($card, $nb_card)
+    {
+        $this->p_deck[$nb_card] = $card;
+    }
+
     public function init_deck()
     {
         $nb_card = 0;
@@ -99,7 +104,7 @@ class player
                 "see" => "see",
             ];
             if (isset($commands[$command])) {
-                $nb_card = $commands[$command]($nb_card);
+                $nb_card = $commands[$command]($player, $nb_card);
             } else
                 echo "Cette commande n'existe pas\n";
         }
