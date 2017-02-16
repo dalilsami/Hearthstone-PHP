@@ -68,7 +68,6 @@ function load_cards()
     return $cards;
 }
 
-*
 function display_cards($class, $cards)
 {
     foreach ($cards as $card) {
