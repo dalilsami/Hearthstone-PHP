@@ -71,10 +71,8 @@ function quit()
         return 1;
     } elseif ($answer == "n")
         return 0;
-    else {
+    else
         echo "\nRéponse invalide\n";
-    }
-
 }
 
 function add($player, &$nb_card)
