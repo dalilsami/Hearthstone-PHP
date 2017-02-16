@@ -10,7 +10,7 @@ include_once "my_classes.php";
 
 function init_deck(&$p)
 {
-    $nb_card = 0;
+    $nb_card = 8;
     while ($nb_card < 10) {
         echo "\n= Ajouter une carte (" . ($nb_card + 1) . "/10) =\n\n";
         display_cards($p->get_p_class(), load_cards());
@@ -28,6 +28,18 @@ function init_deck(&$p)
             echo "\nCette commande n'existe pas\n";
     }
     echo "Vous avez fini votre deck.\n";
+    $p->display_deck();
+    echo "Etes-vous sur de vouloir garder ce deck ? (Y/n)\n";
+    $answer = readline();
+    if ($answer != "Y") {
+        if ($answer == "n") {
+            $nb_card = 8;
+            init_deck($p);
+        } else {
+            echo "\nRéponse invalide\n";
+            init_deck($p);
+        }
+    }
 }
 
 function see()
