@@ -1,9 +1,9 @@
 {
-  "nom": "Blizzard",
+  "nom": "Kazakus",
   "points": {
-    "attaque": "",
-    "vie": "",
-    "mana": "5"
+    "attaque": "3",
+    "vie": "3",
+    "mana": "4"
   },
   "type": "serviteur",
   "classe_joueur": "mage",
