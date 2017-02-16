@@ -11,12 +11,23 @@ require_once "step1.php";
 
 function quit()
 {
-    echo "ca marche pas\n";
+    echo "Voulez-vous vraiment quitter My Hearthstone ? (Y/n)\n";
+    $answer = readline();
+    if ($answer == "Y")
+        return 1;
+    elseif ($answer == "n")
+        return 0;
+    else {
+        echo "Réponse invalide\n";
+        return 0;
+    }
+
 }
 
 function add()
 {
     echo "add\n";
+    return 0;
 }
 
 function load_cards()
@@ -74,7 +85,7 @@ function my_hearthstone($argv)
         ];
         if (isset($commands[$command])) {
             echo "Cette commande existe\n";
-            $commands[$command]();
+            $game = $commands[$command]();
         }
         else
             echo "Cette commande n'existe pas\n";
