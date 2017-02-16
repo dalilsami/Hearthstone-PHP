@@ -37,7 +37,7 @@ function init_deck(&$p)
                 init_deck($p);
             } else {
                 echo "\nRéponse invalide\n";
-                init_deck($p);
+                $answer = readline();
             }
         }
     }
