@@ -63,7 +63,7 @@ function quit()
 function add($player, &$nb_card)
 {
     $card = null;
-    echo("Quelle carte voulez-vous ajouter ?\n");
+    echo("Quelle carte voulez-vous ajouter ?\n\n");
     $card_name = readline();
     foreach (load_cards() as $tmp_card) {
         if ($card_name === $tmp_card->get_c_name())
