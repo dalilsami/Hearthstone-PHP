@@ -26,10 +26,18 @@ function quit($player, $nb_card)
 
 function add($player, $nb_card)
 {
+    $card = 0;
     echo("Quelle carte ajouter ?\n");
-    $card = readline();
-    $player->add_card_to_deck($card, $nb_card);
-    $nb_card++;
+    $card_name = readline();
+    foreach (load_cards() as $tmp_card) {
+        if ($card_name === $tmp_card->get_c_name())
+            $card = $tmp_card;
+    }
+    if ($card != 0) {
+        $player->add_card_to_deck($card, $nb_card);
+        $nb_card++;
+    } else
+        echo "Cette carte n'existe pas";
     return $nb_card;
 }
 
@@ -60,6 +68,7 @@ function load_cards()
     return $cards;
 }
 
+*
 function display_cards($class, $cards)
 {
     foreach ($cards as $card) {

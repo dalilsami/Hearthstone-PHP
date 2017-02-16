@@ -80,3 +80,5 @@ function init($argv)
     } else
         return class_invalide();
 }
+
+?>
