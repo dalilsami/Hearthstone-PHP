@@ -8,6 +8,22 @@
 
 include_once "my_classes.php";
 
+function see($player, $nb_card)
+{
+    $card = null;
+    echo("Quelle carte regarder ?\n");
+    $card_name = readline();
+    foreach (load_cards() as $tmp_card) {
+        if ($card_name === $tmp_card->get_c_name())
+            $card = $tmp_card;
+    }
+    if ($card != null) {
+        echo "ok\n";
+    } else
+        echo "Cette carte n'existe pas";
+    return $nb_card;
+}
+
 function quit()
 {
     echo "Voulez-vous vraiment quitter My Hearthstone ? (Y/n)\n";
