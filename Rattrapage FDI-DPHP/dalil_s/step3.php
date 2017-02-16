@@ -14,6 +14,7 @@ function init_callaghan()
     $computer->init_player("Callaghan", rand(1, 9));
     init_deck_ia($computer);
     $computer->deck_shuffle();
+    return $computer;
 }
 
 function init_deck_ia(&$comp)
