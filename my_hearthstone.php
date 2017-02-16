@@ -56,7 +56,7 @@ function my_hearthstone($argv)
     echo("Cartes : \n");
     load_cards();
     while ($game == 0) {
-
+        display_cards($player->get_p_class(), load_cards());
         readline();
     }
 }
