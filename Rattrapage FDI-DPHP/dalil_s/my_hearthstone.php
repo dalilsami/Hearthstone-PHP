@@ -9,11 +9,11 @@
 require_once "player.php";
 require_once "step1.php";
 
-function pick_a_deck()
+function pick_a_deck($player)
 {
     echo("\n=== PICK A DECK ===\n\n");
     echo("Constituez un deck de 10 cartes pour affronter vos ennemis.");
-    if ($dir = opendir("json/")) {
+    if ($dir = opendir("json/$player->p_class")) {
         while (($file = readdir($dir)) !== false) {
             if ($file != "." || $file != "..")
                 echo "filename: $file \n";
@@ -30,7 +30,7 @@ function my_hearthstone($argv)
     if (!$player)
         return;
     $player->display();
-    pick_a_deck();
+    pick_a_deck($player);
 }
 
 if (isset($argv[3]))
