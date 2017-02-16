@@ -30,10 +30,10 @@ function load_cards()
                 $card = new card;
                 $card->create_card($class, "$file");
                 $cards[] = $card;
-                print_r($cards);
             }
         }
     }
+    print_r($cards);
 }
 
 function my_hearthstone($argv)
