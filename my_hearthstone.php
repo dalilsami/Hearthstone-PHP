@@ -10,7 +10,7 @@ require_once "player.php";
 
 function class_invalide()
 {
-    echo "Veuillez entrer votre pseudonyme et une classe valide.\n";
+    echo "Veuillez entrer votre pseudonyme puis une classe valide.\n";
     echo "Classes :\n";
     echo "- Mage\n";
     echo "- Chasseur\n";
