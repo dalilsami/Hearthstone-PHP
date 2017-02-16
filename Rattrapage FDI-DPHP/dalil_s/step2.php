@@ -8,7 +8,7 @@
 
 include_once "my_classes.php";
 
-function init_deck($p)
+function init_deck(&$p)
 {
     $nb_card = 0;
     while ($nb_card < 10) {
