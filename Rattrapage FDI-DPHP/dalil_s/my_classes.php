@@ -88,8 +88,21 @@ class player
 
     public function init_deck()
     {
-        echo("Pick a card\n");
-        readline();
+        $nb_card = 0;
+        while ($nb_card < 10) {
+            echo "\nPick a card : \n\n";
+            display_cards($this->get_p_class(), load_cards());
+            $command = readline();
+            $commands = [
+                "quit" => "quit",
+                "add" => "add",
+                "see" => "see",
+            ];
+            if (isset($commands[$command])) {
+                $nb_card = $commands[$command]($nb_card);
+            } else
+                echo "Cette commande n'existe pas\n";
+        }
     }
 
     public function get_p_name()
