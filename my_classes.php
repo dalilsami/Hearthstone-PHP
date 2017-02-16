@@ -110,6 +110,11 @@ class player
             echo $card->get_c_name() . "\n";
         }
     }
-}
 
-?>
+    public function deck_shuffle()
+    {
+        print_r($this->p_deck);
+        shuffle($this->p_deck);
+        print_r($this->p_deck);
+    }
+}
