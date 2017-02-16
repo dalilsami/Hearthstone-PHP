@@ -6,6 +6,35 @@
  * Date: 16/02/17
  * Time: 09:41
  */
+class deck
+{
+    private $deck_cards = 10;
+}
+
+class card
+{
+    private $card_name = "name";
+    private $type = "type";
+    private $class = "Dummy";
+    private $mana = 0;
+    private $atk = 0;
+    private $hp = 0;
+    private $desc = "desc";
+
+    public function create_card()
+    {
+        if ($dir = opendir("json/$this->p_class")) {
+            while (($file = readdir($dir)) !== false) {
+                if ($file != "." && $file != "..") {
+                    $file_contents = file_get_contents("json/$this->p_class/$file") . "\n";
+                    preg_match('/nom":\s+"([^"]+)/', $file_contents, $card_name);
+                    echo "$card_name[1]\n";
+                }
+            }
+            closedir($dir);
+        }
+    }
+}
 
 class player
 {
@@ -33,34 +62,12 @@ class player
 
     public function init_deck()
     {
-        if ($dir = opendir("json/$this->p_class")) {
-            while (($file = readdir($dir)) !== false) {
-                if ($file != "." && $file != "..") {
-                    $file_contents = file_get_contents("json/$this->p_class/$file") . "\n";
-                    preg_match('/nom":\s+"([^"]+)/', $file_contents, $card_name);
-                    echo "$card_name[1]\n";
-                }
-            }
-            echo("Pick a card\n");
-            $prompt = readline();
-
-            closedir($dir);
-        }
+        echo("Pick a card\n");
+        readline();
     }
     public function display()
     {
         echo "Votre pseudo : $this->p_name\n";
         echo "Votre classe : $this->p_class\n";
     }
-}
-
-class card
-{
-    private $c_name = "name";
-    private $c_type = "type";
-    private $c_class = "Dummy";
-    private $c_mana = 0;
-    private $c_atk = 0;
-    private $c_hp = 0;
-    private $c_desc = "desc";
 }
