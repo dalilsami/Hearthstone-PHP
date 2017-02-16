@@ -54,18 +54,13 @@ class player
     }
 }
 
-class deck
-{
-    private $deck_cards = 10;
-}
-
 class card
 {
-    private $card_name = "name";
-    private $type = "type";
-    private $class = "Dummy";
-    private $mana = 0;
-    private $atk = 0;
-    private $hp = 0;
-    private $desc = "desc";
+    private $c_name = "name";
+    private $c_type = "type";
+    private $c_class = "Dummy";
+    private $c_mana = 0;
+    private $c_atk = 0;
+    private $c_hp = 0;
+    private $c_desc = "desc";
 }
