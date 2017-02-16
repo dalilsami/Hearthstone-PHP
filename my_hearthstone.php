@@ -33,6 +33,7 @@ function load_cards()
             }
         }
     }
+    return $cards;
 }
 
 function display_cards($class, $cards)
@@ -55,6 +56,7 @@ function my_hearthstone($argv)
     echo("Cartes : \n");
     load_cards();
     while ($game == 0) {
+
         readline();
     }
 }
