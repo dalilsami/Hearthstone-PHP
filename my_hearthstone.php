@@ -8,7 +8,8 @@
 
 require_once "player.php";
 
-function class_invalide() {
+function class_invalide()
+{
     echo "Veuillez entrer votre pseudonyme et une classe valide.\n";
     echo "Classes :\n";
     echo "- Mage\n";
@@ -23,7 +24,8 @@ function class_invalide() {
     return 0;
 }
 
-function pick_class($class) {
+function pick_class($class)
+{
     $classes = [
         "Mage" => 1,
         "mage" => 1,
@@ -66,7 +68,8 @@ function pick_class($class) {
         return 0;
 }
 
-function init($argv){
+function init($argv)
+{
     if (isset($argv[1]) && isset($argv[2])) {
         $username = $argv[1];
         $class = pick_class($argv[2]);
@@ -74,15 +77,14 @@ function init($argv){
             $player = new player();
             $player->init_player($username, $class);
             return $player;
-        }
-        else
+        } else
             return class_invalide();
-    }
-    else
+    } else
         return class_invalide();
 }
 
-function my_hearthstone($argv) {
+function my_hearthstone($argv)
+{
     echo "\n=== MY HEARTHSTONE ===\n\n";
     $player = init($argv);
     if (!$player)
@@ -90,4 +92,7 @@ function my_hearthstone($argv) {
     $player->display();
 }
 
-my_hearthstone($argv);
+if (isset($argv[3]))
+    echo "my_hearthstone: trop d'arguments";
+else
+    my_hearthstone($argv);
