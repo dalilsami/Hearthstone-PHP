@@ -56,11 +56,6 @@ function add($player, $nb_card)
     return $nb_card;
 }
 
-function see($player, $nb_card)
-{
-    $player->display_deck();
-}
-
 function load_cards()
 {
     $cards = [];
