@@ -25,5 +25,6 @@ function init_deck_ia(&$comp)
         $rn = rand(0, count($cards) - 1);
         if ($cards[$rn]->get_c_class() === $comp->get_p_class())
             $comp->add_card_to_deck($cards[$rn], $i);
+        $i++;
     }
 }

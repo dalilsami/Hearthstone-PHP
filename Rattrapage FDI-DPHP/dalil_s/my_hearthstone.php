@@ -25,9 +25,6 @@ function my_hearthstone($argv)
     $player->deck_shuffle();
     $ia = init_ia("Callaghan");
     echo "Un nouvel adversaire apparait ! Il s'agit de " . $ia->get_p_name() . ", un puissant " . $ia->get_p_class() . ".";
-    while ($game == 0) {
-
-    }
 }
 
 if (isset($argv[3]))
