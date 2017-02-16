@@ -125,6 +125,7 @@ class player
 
     public function display_deck()
     {
+        echo "\n\nVotre Deck :\n\n";
         foreach ($this->p_deck as $card) {
             echo $card->get_c_name() . "\n";
         }
