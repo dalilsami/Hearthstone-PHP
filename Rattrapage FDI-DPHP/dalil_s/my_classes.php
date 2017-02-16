@@ -42,8 +42,10 @@ class card
         echo "\n$this->c_name\n";
         echo "Classe: $this->c_class\n";
         echo "Type: $this->c_type\n";
-        echo "Points d'attaque: $this->c_atk\n";
-        echo "Points de vie: $this->c_hp\n";
+        if ($this->c_type !== "sort") {
+            echo "Points d'attaque: $this->c_atk\n";
+            echo "Points de vie: $this->c_hp\n";
+        }
         echo "Mana: $this->c_mp\n";
         echo "\"$this->c_desc\"\n";
     }
