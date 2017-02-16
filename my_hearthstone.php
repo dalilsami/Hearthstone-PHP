@@ -9,6 +9,18 @@
 require_once "player.php";
 require_once "step1.php";
 
+function load_cards()
+{
+    $cards = [];
+    $dir = opendir("json/paladin");
+    while ($file = readdir($dir)) {
+        $card = new card;
+        $card->create_card("paladin", "$file");
+        $cards[] = $card;
+        $card->display();
+    }
+}
+
 function my_hearthstone($argv)
 {
     echo "\n=== MY HEARTHSTONE ===\n\n";
