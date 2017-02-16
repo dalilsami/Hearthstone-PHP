@@ -68,8 +68,13 @@ function my_hearthstone($argv)
     while ($game == 0) {
         display_cards($player->get_p_class(), load_cards());
         $command = readline();
-        if (function_exists("$command") == true) {
-            echo "test\n";
+        $commands = [
+            "quit" => "quit",
+            "add" => "add",
+        ];
+        if (isset($commands[$command])) {
+            echo "Cette commande existe\n";
+            $commands[$command]();
         }
         else
             echo "Cette commande n'existe pas\n";
