@@ -15,7 +15,7 @@ function pick_a_deck()
     echo("Constituez un deck de 10 cartes pour affronter vos ennemis.");
     if ($dir = opendir("json/")) {
         while (($file = readdir($dir)) !== false) {
-            if ("$file" != "." || "$file" != "..")
+            if ($file != "." || $file != "..")
                 echo "filename: $file \n";
         }
         closedir($dir);
