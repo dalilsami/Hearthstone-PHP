@@ -74,6 +74,8 @@ function init($argv)
         if ($class != 0) {
             $player = new player();
             $player->init_player($username, $class);
+            echo "Votre nom : $player->p_name\n";
+            echo "Votre classe : $player->p_class\n";
             return $player;
         } else
             return class_invalide();
