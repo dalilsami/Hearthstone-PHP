@@ -8,9 +8,14 @@
  */
 class player
 {
-    private $player_name;
-    private $player_class;
-    private $player_hp;
-    private $player_mp;
+    private $player_name = "derp";
+    private $player_class = 0;
+    private $player_hp = 15;
+    private $player_mp = 0;
     private $player_deck;
+}
+
+class deck
+{
+    private $deck_cards = 10;
 }

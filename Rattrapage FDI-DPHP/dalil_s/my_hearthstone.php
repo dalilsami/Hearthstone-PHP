@@ -58,8 +58,8 @@ function init($argv){
         $username = $argv[1];
         $class = pick_class($argv[2]);
         if ($class != 0) {
-            echo "Votre nom : $argv[1]\n";
-            echo "Votre classe : $class\n";
+            $player = new player();
+            return $player;
         }
         else
             class_invalide();
@@ -70,7 +70,7 @@ function init($argv){
 
 function my_hearthstone($argv) {
     echo "\n=== MY HEARTHSTONE ===\n\n";
-    init($argv);
+    $player = init($argv);
 }
 
 my_hearthstone($argv);
