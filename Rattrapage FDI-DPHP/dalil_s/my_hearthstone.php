@@ -12,12 +12,25 @@ require_once "step1.php";
 function load_cards()
 {
     $cards = [];
-    $dir = opendir("json/paladin");
-    while ($file = readdir($dir)) {
-        if ($file != "." && $file != "..") {
-            $card = new card;
-            $card->create_card("paladin", "$file");
-            $cards[] = $card;
+    $array = [
+        1 => "mage",
+        2 => "chasseur",
+        3 => "druide",
+        4 => "paladin",
+        5 => "pretre",
+        6 => "voleur",
+        7 => "chaman",
+        8 => "demoniste",
+        9 => "guerrier",
+    ];
+    foreach ($key as $class) {
+        $dir = opendir("json/$class");
+        while ($file = readdir($dir)) {
+            if ($file != "." && $file != "..") {
+                $card = new card;
+                $card->create_card($class, "$file");
+                $cards[] = $card;
+            }
         }
     }
 }
