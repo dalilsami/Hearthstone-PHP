@@ -35,7 +35,7 @@ class player
     {
         echo("\n=== PICK A DECK ===\n\n");
         echo("Constituez un deck de 10 cartes pour affronter vos ennemis.");
-        if ($dir = opendir("json/$player->p_class")) {
+        if ($dir = opendir("json/$this->p_class")) {
             while (($file = readdir($dir)) !== false) {
                 if ($file != "." || $file != "..")
                     echo "filename: $file \n";
