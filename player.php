@@ -32,7 +32,7 @@ class player
     }
     public function display()
     {
-        echo "Votre pseudo : $this->p_name prout\n";
+        echo "Votre pseudo : $this->p_name\n";
         echo "Votre classe : $this->p_class\n";
     }
 }
