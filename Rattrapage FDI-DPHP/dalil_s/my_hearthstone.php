@@ -39,7 +39,7 @@ function load_cards()
 function display_cards($class, $cards)
 {
     foreach ($cards as $card) {
-        if ($card->c_class == "$class")
+        if ($card->get_c_class() == "$class")
             echo "$card->c_name\n";
     }
 }
