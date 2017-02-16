@@ -17,15 +17,15 @@ class player
     public function init_player($name, $class)
     {
         $array = [
-            1 => "Mage",
-            2 => "Chasseur",
-            3 => "Druide",
-            4 => "Paladin",
-            5 => "Prêtre",
-            6 => "Voleur",
-            7 => "Chaman",
-            8 => "Démoniste",
-            9 => "Guerrier",
+            1 => "mage",
+            2 => "chasseur",
+            3 => "druide",
+            4 => "paladin",
+            5 => "pretre",
+            6 => "voleur",
+            7 => "chaman",
+            8 => "demoniste",
+            9 => "guerrier",
         ];
         $this->p_name = $name;
         $this->p_class = $array[$class];
