@@ -23,7 +23,9 @@ function init_deck(&$p)
             "deck" => "deck",
         ];
         if (isset($commands[$command])) {
-            $commands[$command]($p, $nb_card);
+            $quit = $commands[$command]($p, $nb_card);
+            if ($quit == -42)
+                return -42;
         } else
             echo "\nCette commande n'existe pas\n";
     }
@@ -68,7 +70,7 @@ function quit()
     $answer = readline();
     if ($answer == "Y") {
         echo "\nAu revoir !\n";
-        return 1;
+        return -42;
     } elseif ($answer == "n")
         return 0;
     else
