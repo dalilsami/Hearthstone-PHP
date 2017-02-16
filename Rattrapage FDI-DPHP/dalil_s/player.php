@@ -21,9 +21,7 @@ class card
         if (fopen("json/$class/$card", "r")) {
             $file_contents = file_get_contents("json/$class/$card") . "\n";
             preg_match('/nom":\s+"([^"]+)/', $file_contents, $card_name);
-            echo "$card_name[1]\n";
             $this->c_name = $card_name[1];
-            echo $this->c_name;
         }
     }
 }
@@ -59,9 +57,13 @@ class player
         readline();
     }
 
-    public function display()
+    public function get_p_name()
     {
-        echo "Votre pseudo : $this->p_name\n";
-        echo "Votre classe : $this->p_class\n";
+        return $this->p_name;
+    }
+
+    public function get_p_class()
+    {
+        return $this->p_class;
     }
 }
