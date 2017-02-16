@@ -6,6 +6,7 @@
  * Date: 16/02/17
  * Time: 09:41
  */
+
 class player
 {
     private $p_name = "derp";
