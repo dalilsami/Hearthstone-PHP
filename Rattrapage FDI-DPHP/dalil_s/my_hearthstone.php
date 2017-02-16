@@ -79,7 +79,7 @@ function my_hearthstone($argv)
     echo("Cartes : \n");
     load_cards();
     while ($game == 0) {
-        echo "\nPick a card : \n\n"
+        echo "\nPick a card : \n\n";
         display_cards($player->get_p_class(), load_cards());
         $command = readline();
         $commands = [
