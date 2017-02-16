@@ -35,6 +35,14 @@ function load_cards()
     }
 }
 
+function display_cards($class, $cards)
+{
+    foreach ($cards as $card) {
+        if ($card->c_class == "$class")
+            echo "$card->c_name\n";
+    }
+}
+
 function my_hearthstone($argv)
 {
     echo "\n=== MY HEARTHSTONE ===\n\n";
@@ -56,3 +64,5 @@ if (isset($argv[3]))
     echo "my_hearthstone: trop d'arguments\n";
 else
     my_hearthstone($argv);
+
+?>
