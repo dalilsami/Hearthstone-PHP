@@ -22,7 +22,7 @@ function my_hearthstone($argv)
     echo("Cartes : \n");
     while ($game == 0) {
         $card = new card();
-        $card->create_card("paladin", "humilite.json");
+        $card->create_card($player->p_class, "humilite.json");
         return;
     }
 }
