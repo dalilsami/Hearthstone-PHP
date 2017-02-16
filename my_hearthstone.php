@@ -23,7 +23,6 @@ function my_hearthstone($argv)
     while ($game == 0) {
         $card = new card();
         $card->create_card($player->get_p_class(), "humilite.json");
-        return;
     }
 }
 
