@@ -13,8 +13,10 @@ function quit()
 {
     echo "Voulez-vous vraiment quitter My Hearthstone ? (Y/n)\n";
     $answer = readline();
-    if ($answer == "Y")
+    if ($answer == "Y") {
+        echo "Au revoir !\n";
         return 1;
+    }
     elseif ($answer == "n")
         return 0;
     else {
@@ -77,6 +79,7 @@ function my_hearthstone($argv)
     echo("Cartes : \n");
     load_cards();
     while ($game == 0) {
+        echo "\nPick a card : \n\n"
         display_cards($player->get_p_class(), load_cards());
         $command = readline();
         $commands = [
