@@ -57,7 +57,15 @@ function my_hearthstone($argv)
     load_cards();
     while ($game == 0) {
         display_cards($player->get_p_class(), load_cards());
-        readline();
+        $command = readline();
+        $commands = [
+            "quit" => quit(),
+            "add" => add(),
+        ];
+        if (isset($commands["$command"]))
+            $commands[$command];
+        else
+            echo "Cette commande n'existe pas\n";
     }
 }
 
