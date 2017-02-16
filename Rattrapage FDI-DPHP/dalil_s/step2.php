@@ -8,7 +8,7 @@
 
 include_once "my_classes.php";
 
-function quit($nb_card)
+function quit($player, $nb_card)
 {
     echo "Voulez-vous vraiment quitter My Hearthstone ? (Y/n)\n";
     $answer = readline();
@@ -24,11 +24,11 @@ function quit($nb_card)
 
 }
 
-function add($nb_card)
+function add($player, $nb_card)
 {
     echo("Quelle carte ajouter ?");
     $card = readline();
-    $player->p_deck[$nb_card] = $card;
+    $player->add_card_to_deck($card, $nb_card);
     $nb_card++;
     return $nb_card;
 }
