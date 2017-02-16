@@ -22,7 +22,7 @@ class card
             $file_contents = file_get_contents("json/$class/$card") . "\n";
             preg_match('/nom":\s+"([^"]+)/', $file_contents, $card_name);
             echo "$card_name[1]\n";
-            $this->c_name = $card_name;
+            $this->c_name = $card_name[1];
             echo $this->c_name;
         }
     }
