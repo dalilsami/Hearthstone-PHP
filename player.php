@@ -41,7 +41,7 @@ class player
                 if ($file != "." && $file != "..") {
                     $file_contents = file_get_contents("json/$this->p_class/$file") . "\n";
                     preg_match('/nom":\s+"([^"]+)/', $file_contents, $card_name);
-                    echo $card_name[0];
+                    echo $card_name[1];
                 }
             }
             closedir($dir);
