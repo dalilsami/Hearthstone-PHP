@@ -8,11 +8,21 @@
  */
 class player
 {
-    private $player_name = "derp";
-    private $player_class = 0;
-    private $player_hp = 15;
-    private $player_mp = 0;
-    private $player_deck;
+    private $p_name = "derp";
+    private $p_class = 0;
+    private $p_hp = 15;
+    private $p_mp = 0;
+    private $p_deck;
+    public function init_player($name, $class)
+    {
+        $this->p_name = $name;
+        $this->p_class = $class;
+    }
+    public function display()
+    {
+        echo "$this->p_name\n";
+        echo "$this->p_class\n";
+    }
 }
 
 class deck
