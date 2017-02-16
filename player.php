@@ -31,9 +31,17 @@ class player
         $this->p_class = $array[$class];
     }
 
-    public function init_deck()
+    public function init_deck($player)
     {
-
+        echo("\n=== PICK A DECK ===\n\n");
+        echo("Constituez un deck de 10 cartes pour affronter vos ennemis.");
+        if ($dir = opendir("json/$player->p_class")) {
+            while (($file = readdir($dir)) !== false) {
+                if ($file != "." || $file != "..")
+                    echo "filename: $file \n";
+            }
+            closedir($dir);
+        }
     }
     public function display()
     {
