@@ -39,7 +39,7 @@ class card
 
     public function display()
     {
-        echo "$this->c_name\n";
+        echo "\n$this->c_name\n";
         echo "Classe: $this->c_class\n";
         echo "Type: $this->c_type\n";
         echo "Points d'attaque: $this->c_atk\n";
