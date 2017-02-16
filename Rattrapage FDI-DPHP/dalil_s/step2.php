@@ -27,7 +27,7 @@ function init_deck(&$p)
         } else
             echo "\nCette commande n'existe pas\n";
     }
-    echo "Vous avez fini votre deck.\n";
+    echo "\nVous avez fini votre deck.\n";
     $p->display_deck();
     if (!keep_deck())
         init_deck($p);
@@ -59,7 +59,7 @@ function see()
     if ($card != null) {
         $card->display();
     } else
-        echo "Cette carte n'existe pas\n";
+        echo "\nCette carte n'existe pas\n";
 }
 
 function quit()
