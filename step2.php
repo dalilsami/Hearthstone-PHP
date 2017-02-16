@@ -27,9 +27,9 @@ function init_deck(&$p)
         } else
             echo "\nCette commande n'existe pas\n";
     }
-    echo "Vous avez fini votre deck.\n";
+    echo "\nVous avez fini votre deck.\n";
     $p->display_deck();
-    echo "Etes-vous sur de vouloir garder ce deck ? (Y/n)\n";
+    echo "\nEtes-vous sur de vouloir garder ce deck ? (Y/n)\n";
     $answer = readline();
     while ($answer != "Y" && $answer != "n") {
         if ($answer != "Y") {
