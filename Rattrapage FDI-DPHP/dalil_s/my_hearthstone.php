@@ -23,7 +23,7 @@ function load_cards()
         8 => "demoniste",
         9 => "guerrier",
     ];
-    foreach ($key as $class) {
+    foreach ($array as $class) {
         $dir = opendir("json/$class");
         while ($file = readdir($dir)) {
             if ($file != "." && $file != "..") {
