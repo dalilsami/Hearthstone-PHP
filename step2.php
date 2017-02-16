@@ -8,6 +8,28 @@
 
 include_once "my_classes.php";
 
+function init_deck($p)
+{
+    $nb_card = 0;
+    while ($nb_card < 10) {
+        echo "\n= Ajouter une carte (" . ($nb_card + 1) . "/10) =\n\n";
+        display_cards($p->get_p_class(), load_cards());
+        echo "\nCommandes :\n- add\n- see\n- deck\n- quit\n\n";
+        $command = readline();
+        $commands = [
+            "quit" => "quit",
+            "add" => "add",
+            "see" => "see",
+            "deck" => "deck",
+        ];
+        if (isset($commands[$command])) {
+            $commands[$command]($p, $nb_card);
+        } else
+            echo "Cette commande n'existe pas\n";
+    }
+    echo "Vous avez fini votre deck.\n";
+}
+
 function see()
 {
     $card = null;
@@ -38,7 +60,7 @@ function quit()
 
 }
 
-function add($player, $nb_card)
+function add($player, &$nb_card)
 {
     $card = null;
     echo("Quelle carte ajouter ?\n");
@@ -52,7 +74,6 @@ function add($player, $nb_card)
         $nb_card++;
     } else
         echo "Cette carte n'existe pas";
-    return $nb_card;
 }
 
 function deck($player, $nb_card)
@@ -61,7 +82,6 @@ function deck($player, $nb_card)
         $player->display_deck();
     else
         echo "\n\nVous n'avez pas de cartes dans votre deck.\n\n";
-    return $nb_card;
 }
 
 function load_cards()
