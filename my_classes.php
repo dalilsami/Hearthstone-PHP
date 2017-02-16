@@ -97,12 +97,13 @@ class player
         while ($nb_card < 10) {
             echo "\n= Ajouter une carte (" . ($nb_card + 1) . "/10) =\n\n";
             display_cards($this->get_p_class(), load_cards());
-            echo "\nCommandes :\n- add\n- see\n- quit\n\n";
+            echo "\nCommandes :\n- add\n- see\n- deck\n- quit\n\n";
             $command = readline();
             $commands = [
                 "quit" => "quit",
                 "add" => "add",
                 "see" => "see",
+                "deck" => "deck",
             ];
             if (isset($commands[$command])) {
                 $nb_card = $commands[$command]($player, $nb_card);
