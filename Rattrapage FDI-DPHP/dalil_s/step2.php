@@ -8,7 +8,7 @@
 
 include_once "my_classes.php";
 
-function see($player, $nb_card)
+function see()
 {
     $card = null;
     echo("Quelle carte regarder ?\n");
@@ -18,10 +18,9 @@ function see($player, $nb_card)
             $card = $tmp_card;
     }
     if ($card != null) {
-        echo "ok\n";
+        $card->display();
     } else
         echo "Cette carte n'existe pas\n";
-    return $nb_card;
 }
 
 function quit()
