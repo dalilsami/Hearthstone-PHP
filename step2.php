@@ -10,7 +10,7 @@ include_once "my_classes.php";
 
 function init_deck(&$p)
 {
-    $nb_card = 0;
+    $nb_card = 9;
     while ($nb_card < 10) {
         echo "\n= Ajouter une carte (" . ($nb_card + 1) . "/10) =\n\n";
         display_cards($p->get_p_class(), load_cards());
