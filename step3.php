@@ -8,10 +8,10 @@
 
 require_once "step2.php";
 
-function init_callaghan()
+function init_ia($ia_name)
 {
     $computer = new player();
-    $computer->init_player("Callaghan", rand(1, 9));
+    $computer->init_player($ia_name, rand(1, 9));
     init_deck_ia($computer);
     $computer->deck_shuffle();
     return $computer;
