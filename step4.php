@@ -6,7 +6,7 @@
  * Time: 17:35
  */
 
-function init_game()
+function pile_face()
 {
     $coin = rand(1, 2);
     echo "Pile ou Face ?";
@@ -23,4 +23,9 @@ function init_game()
         echo "C'est $coin, vous commencez !";
     else
         echo "C'est $coin, vous jouez en deuxieme !";
+}
+
+function init_game()
+{
+    pile_face();
 }
