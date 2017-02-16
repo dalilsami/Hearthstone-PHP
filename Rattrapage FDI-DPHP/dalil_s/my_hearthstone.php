@@ -13,10 +13,16 @@ function my_hearthstone($argv)
 {
     echo "\n=== MY HEARTHSTONE ===\n\n";
     $player = init($argv);
+    $game = 0;
     if (!$player)
         return;
     $player->display();
-    $player->init_deck();
+    echo("\n=== PICK A DECK ===\n\n");
+    echo("Constituez un deck de 10 cartes pour affronter vos ennemis.\n");
+    echo("Cartes : \n");
+    while ($game == 0) {
+        $player->init_deck();
+    }
 }
 
 if (isset($argv[3]))
