@@ -8,7 +8,7 @@
 
 include_once "my_classes.php";
 
-function quit($player, $nb_card)
+function quit()
 {
     echo "Voulez-vous vraiment quitter My Hearthstone ? (Y/n)\n";
     $answer = readline();
