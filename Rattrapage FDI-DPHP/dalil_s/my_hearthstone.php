@@ -72,8 +72,10 @@ function my_hearthstone($argv)
             "quit" => "quit",
             "add" => "add",
         ];
-        if (isset($command))
+        if (isset($command())) {
             echo "test\n";
+
+        }
         else
             echo "Cette commande n'existe pas\n";
     }
