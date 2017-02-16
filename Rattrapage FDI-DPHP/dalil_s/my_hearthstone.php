@@ -40,7 +40,7 @@ function display_cards($class, $cards)
 {
     foreach ($cards as $card) {
         if ($card->get_c_class() == "$class")
-            echo "$card->c_name\n";
+            echo $card->get_c_name() . "\n";
     }
 }
 
